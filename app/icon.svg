@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Brand gradient: portfolio-glow-a to portfolio-glow-b in globals.css -->
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5B5BD6"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <rect width="64" height="32" rx="15" fill="url(#shine)"/>
+  <!-- "ID" drawn as paths so it renders the same everywhere, no font needed -->
+  <g fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round">
+    <path d="M11 18h14M18 18v28M11 46h14" stroke-linecap="square"/>
+    <path d="M34 18v28h6c8 0 13-5.5 13-14s-5-14-13-14z"/>
+  </g>
+</svg>

@@ -100,7 +100,11 @@ export function Hero({ profile, currentRole }: HeroProps) {
                       variant="outline"
                       className="whitespace-nowrap"
                     >
-                      <a href={profile.resumeUrl}>
+                      <a
+                        href={profile.resumeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Download className="mr-1.5 h-4 w-4" />
                         Resume
                       </a>
@@ -144,6 +148,15 @@ export function Hero({ profile, currentRole }: HeroProps) {
 
               <div
                 className="absolute -right-6 -top-6 -z-10 h-24 w-24 rounded-full bg-primary/20 blur-2xl"
+                aria-hidden
+              />
+              {/* Warm glow that picks up the portrait's red and teal tones */}
+              <div
+                className="absolute -bottom-10 -left-8 -z-10 h-48 w-48 rounded-full bg-rose-500/15 blur-3xl"
+                aria-hidden
+              />
+              <div
+                className="absolute -right-10 top-1/3 -z-10 h-40 w-40 rounded-full bg-teal-400/10 blur-3xl"
                 aria-hidden
               />
             </div>
