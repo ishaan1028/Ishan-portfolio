@@ -1,0 +1,342 @@
+{
+  "profile": {
+    "id": "profile_1",
+    "name": "Ishan Dhawane",
+    "role": "Senior Frontend Engineer",
+    "headline": "AI-native products that feel instant",
+    "summary": "Senior frontend engineer with 5+ years building scalable SaaS platforms and AI-powered product experiences, from agent workflows and real-time streaming to high-performance analytics.",
+    "location": "Pune, Maharashtra",
+    "timezone": "IST (UTC+5:30)",
+    "email": "ishaandhawane77@gmail.com",
+    "avatarUrl": "/portfolio/naruto-portrait.jpg",
+    "resumeUrl": "#",
+    "availability": {
+      "isAvailable": true,
+      "label": "Open to Work"
+    },
+    "socials": [
+      {
+        "id": "social_github",
+        "platform": "github",
+        "label": "GitHub",
+        "url": "https://github.com/ishaan1028"
+      },
+      {
+        "id": "social_linkedin",
+        "platform": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ishan-dhawane"
+      },
+      {
+        "id": "social_email",
+        "platform": "email",
+        "label": "Email",
+        "url": "mailto:ishaandhawane77@gmail.com"
+      }
+    ]
+  },
+  "about": {
+    "title": "Frontend engineering for AI-native products",
+    "experience": "5+ years",
+    "focus": "AI interfaces & real-time UI",
+    "bio": [
+      "I'm a senior frontend engineer with 5+ years building scalable SaaS platforms and AI-powered products. I focus on what users actually notice: fast, responsive and accessible interfaces that stay easy to use as the product grows.",
+      "At MaxIQ I architect the frontend for AI agents and real-time collaboration. I built the Agents Builder, the Skills Builder and the Agentic Workflow Builder, which turns natural-language goals into schedulable multi-step workflows, plus a ChatGPT-style assistant with token streaming, voice input and rich answers. I also build agent UI on the AG-UI protocol with agentic generative UI, so agents render live, interactive components instead of plain text.",
+      "Before that I was a full-stack engineer at Namshi, building its marketplace from zero to one and onboarding brands like Adidas and Victoria's Secret at scale. That backend experience is why I design frontends around real data and real failure modes."
+    ],
+    "highlights": [
+      {
+        "icon": "sparkles",
+        "title": "AI & agentic interfaces",
+        "description": "Agent, skill and workflow builders, streaming LLM chat, and agentic generative UI on the AG-UI protocol.",
+        "tags": [
+          "AG-UI",
+          "Generative UI",
+          "LLM streaming"
+        ]
+      },
+      {
+        "icon": "radio",
+        "title": "Real-time systems",
+        "description": "WebSocket layers with short-lived auth tickets, automatic reconnection and stalled-stream recovery.",
+        "tags": [
+          "WebSockets",
+          "Voice input",
+          "Live updates"
+        ]
+      },
+      {
+        "icon": "layers",
+        "title": "Frontend architecture",
+        "description": "Reusable UI infrastructure and shared controllers, so one foundation powers many product surfaces.",
+        "tags": [
+          "React",
+          "Next.js",
+          "TanStack Query"
+        ]
+      },
+      {
+        "icon": "gauge",
+        "title": "Performance & analytics",
+        "description": "Code splitting, lazy loading and memoization, plus interactive drill-down dashboards with Nivo.",
+        "tags": [
+          "Core Web Vitals",
+          "Nivo",
+          "IndexedDB"
+        ]
+      }
+    ]
+  },
+  "skillGroups": [
+    {
+      "id": "skills_frontend",
+      "title": "Frontend",
+      "icon": "code",
+      "description": "Fast, accessible interfaces on a component architecture that scales with the product.",
+      "skills": [
+        "React",
+        "Next.js",
+        "React Server Components",
+        "TypeScript",
+        "Redux",
+        "Zustand",
+        "TanStack Query",
+        "Zod",
+        "IndexedDB",
+        "MUI / Tailwind CSS",
+        "shadcn/ui",
+        "Framer Motion",
+        "Accessibility (WCAG)",
+        "HTML / CSS / JavaScript"
+      ]
+    },
+    {
+      "id": "skills_ai",
+      "title": "AI & real-time",
+      "icon": "ai",
+      "description": "Streaming, agent-driven experiences that update live as the model and the data change.",
+      "skills": [
+        "AG-UI",
+        "Agentic generative UI",
+        "MCP",
+        "Vercel AI SDK",
+        "json-render",
+        "LangGraph",
+        "RAG",
+        "WebSockets",
+        "Server-Sent Events",
+        "Voice-to-text"
+      ]
+    },
+    {
+      "id": "skills_backend",
+      "title": "Backend & data",
+      "icon": "server",
+      "description": "Enough of the stack to own a feature end to end, from the API and schema to the cache.",
+      "skills": [
+        "Node.js",
+        "Express",
+        "Python",
+        "FastAPI",
+        "REST APIs",
+        "GraphQL / tRPC",
+        "Prisma",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Mongoose",
+        "Supabase",
+        "Redis",
+        "Docker",
+        "AWS"
+      ]
+    },
+    {
+      "id": "skills_practice",
+      "title": "Engineering practice",
+      "icon": "practice",
+      "description": "The habits and tooling that keep a large frontend fast, observable and safe to change.",
+      "skills": [
+        "Frontend system design",
+        "Performance & Core Web Vitals",
+        "Webpack / Vite",
+        "Vitest / React Testing Library",
+        "Playwright",
+        "Storybook / Design systems",
+        "CI/CD (GitHub Actions)",
+        "Vercel",
+        "PostHog",
+        "Sentry",
+        "AI coding · Cursor / Claude Code"
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "id": "exp_maxiq",
+      "company": "MaxIQ",
+      "role": "Senior Frontend Engineer",
+      "focus": "Architecture, AI SaaS, Real-time systems",
+      "location": "Pune · Hybrid",
+      "startDate": "Mar 2024",
+      "endDate": null,
+      "summary": "Own the frontend architecture of MaxIQ's (formerly Gyaan.ai) AI SaaS platform: its flagship AI features, the real-time layer underneath them, and the core product modules.",
+      "highlights": [
+        "Architected and shipped the Agents Builder, Skills Builder and Agentic Workflow Builder; the workflow builder turns natural-language goals into editable, schedulable multi-step agent workflows with live step previews and delivery actions.",
+        "Built agent interfaces on the AG-UI protocol with agentic generative UI, so agents stream their steps, tool calls and state into the product and render interactive components instead of plain text.",
+        "Owned a ChatGPT-style AI assistant with token streaming, streaming voice-to-text input and structured answers with charts, tables, citations and GFM, on reusable controllers and TanStack Query that also power the Agents, Skills and Workflow builders.",
+        "Built the shared real-time layer that streams LLM responses over WebSockets secured with short-lived tickets, with automatic reconnection and stalled-stream recovery.",
+        "Delivered the flagship Pipeline Conversion Analytics feature with interactive Nivo drill-downs, plus an admin interface that improved conversion and waterfall visibility.",
+        "Engineered a real-time Unified Workspace and revamped Home, Views, Emails and Calendar, improving performance with code splitting, lazy loading and memoization."
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "AG-UI",
+        "TanStack Query",
+        "Redux",
+        "WebSockets",
+        "IndexedDB",
+        "MUI",
+        "Nivo"
+      ],
+      "isCurrent": true
+    },
+    {
+      "id": "exp_namshi",
+      "company": "Namshi",
+      "role": "Full-Stack Engineer",
+      "focus": "0→1 Platform, Marketplace, Integrations",
+      "location": "Pune · Remote",
+      "startDate": "Mar 2022",
+      "endDate": "Sep 2023",
+      "summary": "Helped architect and build Namshi's marketplace platform from zero to one, working with the PM, OMS, SRE and Offering teams on scalable partner integration workflows.",
+      "highlights": [
+        "Engineered the marketplace UI with automated catalog ingestion and product lifecycle systems, onboarding brands like Adidas, Victoria's Secret, CampusSutra and LIWA at scale.",
+        "Led frontend development for catalog management, analytics dashboards and the CMS, on reusable component libraries built for complex merchant workflows.",
+        "Built REST APIs and background processing services, and tuned queries and indexes for high-volume catalog workflows.",
+        "Improved performance and delivery speed with code splitting, memoization and leaner Redux state flows, and reviewed PRs and mentored new engineers."
+      ],
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Node.js",
+        "Express",
+        "WebSockets",
+        "AWS",
+        "Google Cloud"
+      ],
+      "isCurrent": false
+    }
+  ],
+  "education": [
+    {
+      "id": "edu_pict",
+      "institution": "Pune Institute of Computer Technology (PICT)",
+      "degree": "B.E., Electronics & Telecommunication",
+      "period": "2017 — 2021",
+      "detail": "CGPA 7.83 · Pune, India"
+    }
+  ],
+  "projects": [
+    {
+      "id": "konnect",
+      "title": "Konnect",
+      "tagline": "A full-stack social app, live in real time.",
+      "description": "Photo posts, follows, likes, comments, real-time chat and live notifications, with Google and GitHub sign-in. Built from scratch on Next.js 16 and Supabase: a static shell prerenders with Partial Prerendering while personal data streams in without layout shift, and Postgres row-level security decides who can read and write every row.",
+      "year": "2026",
+      "category": "Social media app",
+      "logoUrl": "/projects/konnect/logo.png",
+      "images": [
+        {
+          "src": "/projects/konnect/hero.jpg",
+          "alt": "Konnect home feed on desktop and mobile, with stories, a photo post and suggested accounts",
+          "caption": "Feed"
+        },
+        {
+          "src": "/projects/konnect/chat.jpg",
+          "alt": "The same chat open in two browsers, updating live with reactions and a seen receipt",
+          "caption": "Real-time chat"
+        },
+        {
+          "src": "/projects/konnect/features.jpg",
+          "alt": "Post modal with comments, grouped live notifications, social sign-in and the dark mobile theme",
+          "caption": "Features"
+        },
+        {
+          "src": "/projects/konnect/engineering.jpg",
+          "alt": "Lighthouse scores of 100 for performance, accessibility, best practices and SEO, with the engineering highlights",
+          "caption": "Engineering"
+        }
+      ],
+      "scores": [
+        {
+          "label": "Performance",
+          "value": 100
+        },
+        {
+          "label": "Accessibility",
+          "value": 100
+        },
+        {
+          "label": "Best Practices",
+          "value": 100
+        },
+        {
+          "label": "SEO",
+          "value": 100
+        }
+      ],
+      "features": [
+        {
+          "icon": "chat",
+          "title": "Real-time chat",
+          "description": "Typing indicators, online presence, seen receipts, reactions and unsend over private Supabase Realtime channels."
+        },
+        {
+          "icon": "heart",
+          "title": "Posts, likes, comments and saves",
+          "description": "Optimistic updates that roll back if the server says no. Posts open in a modal with their own URL."
+        },
+        {
+          "icon": "bell",
+          "title": "Live notifications",
+          "description": "Likes, comments and follows grouped together and delivered as they happen."
+        },
+        {
+          "icon": "key",
+          "title": "Google, GitHub or one click",
+          "description": "OAuth through Supabase Auth, plus a demo account that is ready to explore."
+        },
+        {
+          "icon": "phone",
+          "title": "Mobile-first, light and dark",
+          "description": "One codebase with a bottom tab bar on phones and four themes everywhere."
+        },
+        {
+          "icon": "shield",
+          "title": "Secure and tested",
+          "description": "Row-level security on every table, 197 pgTAP database tests and 83 Playwright tests with axe accessibility checks."
+        }
+      ],
+      "stack": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Supabase",
+        "Postgres",
+        "Realtime",
+        "TanStack Query",
+        "Zod",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Playwright",
+        "Vercel"
+      ],
+      "videoUrl": "https://youtu.be/30pGhGDbKdo",
+      "liveUrl": "https://konnect-coral.vercel.app",
+      "repoUrl": "https://github.com/ishaan1028/konnect-nextjs"
+    }
+  ]
+}
