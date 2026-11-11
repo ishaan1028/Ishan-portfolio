@@ -23,8 +23,8 @@ export function Contact({ profile }: ContactProps) {
               aria-hidden
             >
               <div className="bg-grid absolute inset-0 opacity-60" />
-              <div className="absolute -top-32 left-1/4 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/25 blur-[100px]" />
-              <div className="absolute -bottom-24 right-10 h-64 w-64 rounded-full bg-sky-500/10 blur-[90px]" />
+              <div className="glow absolute -top-44 left-1/4 h-96 w-96 -translate-x-1/2 text-primary/25" />
+              <div className="glow absolute -bottom-[8.75rem] -right-1 h-[21.5rem] w-[21.5rem] text-sky-500/10" />
             </div>
 
             <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-16">

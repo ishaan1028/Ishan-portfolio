@@ -20,8 +20,8 @@ export function Hero({ profile, currentRole }: HeroProps) {
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
         <div className="bg-grid mask-fade-bottom absolute inset-0 opacity-70" />
-        <div className="absolute -top-40 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-primary/20 blur-[128px]" />
-        <div className="absolute -right-24 top-40 h-80 w-80 rounded-full bg-sky-500/10 blur-[110px]" />
+        <div className="glow absolute -top-56 left-1/2 h-[40rem] w-[40rem] -translate-x-1/2 text-primary/20" />
+        <div className="glow absolute -right-[9.5rem] top-[6.5rem] h-[27rem] w-[27rem] text-sky-500/10" />
       </div>
 
       <div className="container">
@@ -46,17 +46,16 @@ export function Hero({ profile, currentRole }: HeroProps) {
               </p>
             </FadeIn>
 
-            <FadeIn delay={80}>
-              <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
-                {profile.name}
-                <span className="block font-normal text-muted-foreground">
-                  builds{" "}
-                  <span className="text-gradient font-bold">
-                    {profile.headline}
-                  </span>
+            {/* No fade-in: the headline is the largest paint (LCP), so it shows on the first frame. */}
+            <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl xl:text-[4.25rem]">
+              {profile.name}
+              <span className="block font-normal text-muted-foreground">
+                builds{" "}
+                <span className="text-gradient font-bold">
+                  {profile.headline}
                 </span>
-              </h1>
-            </FadeIn>
+              </span>
+            </h1>
 
             <FadeIn delay={140}>
               <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
@@ -121,9 +120,10 @@ export function Hero({ profile, currentRole }: HeroProps) {
             </FadeIn>
           </div>
 
-          {/* Portrait */}
-          <FadeIn delay={40} className="order-first lg:order-none">
-            <div className="relative mx-auto w-full max-w-[13rem] sm:max-w-[16rem] lg:mr-0 lg:max-w-[24rem] xl:max-w-[27rem]">
+          {/* Portrait: no fade-in. On phones it stays smaller than the headline, so the
+              headline (painted on the first frame) is the LCP, not this image. */}
+          <div className="order-first lg:order-none">
+            <div className="relative mx-auto w-full max-w-[10rem] sm:max-w-[16rem] lg:mr-0 lg:max-w-[24rem] xl:max-w-[27rem]">
               <div className="relative rounded-[1.75rem] border border-border bg-card/60 p-2.5 shadow-xl backdrop-blur sm:p-3">
                 <ProfileImage
                   name={profile.name}
@@ -147,20 +147,20 @@ export function Hero({ profile, currentRole }: HeroProps) {
               </div>
 
               <div
-                className="absolute -right-6 -top-6 -z-10 h-24 w-24 rounded-full bg-primary/20 blur-2xl"
+                className="glow absolute -right-11 -top-11 -z-10 h-[8.5rem] w-[8.5rem] text-primary/20"
                 aria-hidden
               />
               {/* Warm glow that picks up the portrait's red and teal tones */}
               <div
-                className="absolute -bottom-10 -left-8 -z-10 h-48 w-48 rounded-full bg-rose-500/15 blur-3xl"
+                className="glow absolute -bottom-[4.5rem] -left-16 -z-10 h-64 w-64 text-rose-500/15"
                 aria-hidden
               />
               <div
-                className="absolute -right-10 top-1/3 -z-10 h-40 w-40 rounded-full bg-teal-400/10 blur-3xl"
+                className="glow absolute -right-[4.5rem] top-1/3 -z-10 h-56 w-56 -translate-y-8 text-teal-400/10"
                 aria-hidden
               />
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
     </section>

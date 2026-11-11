@@ -1,6 +1,6 @@
 # Ishan's portfolio
 
-Personal portfolio — a Next.js 14 app (App Router, TypeScript, Tailwind CSS).
+Personal portfolio — a Next.js 15 app (App Router, TypeScript, Tailwind CSS).
 No database. The only server code is the contact form's Server Action.
 
 ## Getting started
@@ -24,6 +24,13 @@ in `modules/portfolio/actions/sendMessage.ts`. Copy `.env.example` to
 | `CONTACT_TO_EMAIL`   | Your inbox (your Resend account email until a domain is verified) |
 | `CONTACT_FROM_EMAIL` | Optional sender; needs a verified domain                          |
 
+## SEO
+
+`app/page.tsx` sets the title, description, canonical URL and schema.org `Person`
+data. `app/opengraph-image.tsx` builds the link-preview image, and `app/sitemap.ts`
+and `app/robots.ts` serve `/sitemap.xml` and `/robots.txt`. They use the site URL
+from `NEXT_PUBLIC_SITE_URL`, or the production domain on Vercel when it is unset.
+
 Set the same variables in Vercel for production. Without them, the form shows a
 friendly "email me instead" error.
 
@@ -36,7 +43,7 @@ Images go in `public/` and are referenced by path (e.g. `/portfolio/me.jpg`).
 
 | Path                 | Contents                                       |
 | -------------------- | ---------------------------------------------- |
-| `app/`               | Layout, page, 404, global styles               |
+| `app/`               | Layout, page, 404, styles, SEO routes, icons   |
 | `content/`           | Portfolio content (JSON)                       |
 | `modules/portfolio/` | Portfolio sections — see its own README        |
 | `modules/shared/`    | Theme provider and light/dark toggle           |

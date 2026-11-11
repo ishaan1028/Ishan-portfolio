@@ -35,7 +35,7 @@ export function ProfileImage({ name, src, className }: ProfileImageProps) {
             src={src}
             alt={name}
             fill
-            sizes="(min-width: 1280px) 432px, (min-width: 1024px) 384px, 256px"
+            sizes="(min-width: 1280px) 408px, (min-width: 1024px) 360px, (min-width: 640px) 232px, 140px"
             // Portraits keep the head in frame; dark mode tones down bright artwork.
             className="object-cover object-top transition-[filter] duration-300 dark:brightness-[0.9] dark:saturate-[0.95]"
             priority

@@ -14,6 +14,7 @@ modules/portfolio/
 │   ├── content.ts         # portfolioContent — the typed JSON
 │   ├── contact.ts         # contact validation (self-check: npx tsx lib/contact.check.ts)
 │   ├── images.ts          # which image srcs go through next/image optimization
+│   ├── site.ts            # siteUrl for canonical links, sitemap and share image
 │   └── video.ts           # getYouTubeId (self-check: npx tsx lib/video.check.ts)
 └── components/
     ├── PortfolioNav.tsx   # Fixed nav, scroll spy, mobile sheet  (client)

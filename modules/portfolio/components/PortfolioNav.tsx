@@ -2,7 +2,12 @@
 
 import { ColorModeToggle } from "@shared/components/ColorModeToggle";
 import { Button } from "@ui/components/button";
-import { Sheet, SheetContent, SheetTrigger } from "@ui/components/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@ui/components/sheet";
 import { cn } from "@ui/lib";
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -73,24 +78,23 @@ export function PortfolioNav({ name, role }: PortfolioNavProps) {
         className={cn(
           "border-b transition-all duration-300",
           scrolled
-            ? "bg-background/80 border-border/70 shadow-sm backdrop-blur-xl"
+            ? "border-border/70 bg-background/80 shadow-sm backdrop-blur-xl"
             : "border-transparent bg-transparent",
         )}
       >
         <div className="container">
           <div className="flex h-16 items-center justify-between gap-4 sm:h-20">
-            {/* Wordmark */}
-            <a
-              href="#top"
-              className="group flex items-center gap-3"
-              aria-label={`${name} — back to top`}
-            >
-              <span className="border-border bg-card text-primary group-hover:border-primary/50 flex h-9 w-9 items-center justify-center rounded-xl border font-mono text-sm font-bold transition-colors">
+            {/* Wordmark. Its name is the visible name and role (screen-reader only on phones). */}
+            <a href="#top" className="group flex items-center gap-3">
+              <span
+                aria-hidden
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-card font-mono text-sm font-bold text-primary transition-colors group-hover:border-primary/50"
+              >
                 {initials}
               </span>
-              <span className="hidden leading-tight sm:block">
+              <span className="sr-only leading-tight sm:not-sr-only sm:block">
                 <span className="block text-sm font-semibold">{name}</span>
-                <span className="text-muted-foreground block font-mono text-[0.7rem] uppercase tracking-wider">
+                <span className="block font-mono text-[0.7rem] uppercase tracking-wider text-muted-foreground">
                   {role}
                 </span>
               </span>
@@ -98,7 +102,7 @@ export function PortfolioNav({ name, role }: PortfolioNavProps) {
 
             {/* Desktop navigation */}
             <nav className="hidden lg:block" aria-label="Section navigation">
-              <ul className="border-border/70 bg-card/50 flex items-center gap-1 rounded-full border p-1 backdrop-blur">
+              <ul className="flex items-center gap-1 rounded-full border border-border/70 bg-card/50 p-1 backdrop-blur">
                 {navItems.map((item) => (
                   <li key={item.id}>
                     <a
@@ -140,11 +144,16 @@ export function PortfolioNav({ name, role }: PortfolioNavProps) {
                   </Button>
                 </SheetTrigger>
 
-                <SheetContent side="right" className="w-[min(20rem,85vw)]">
+                <SheetContent
+                  side="right"
+                  aria-describedby={undefined}
+                  className="w-[min(20rem,85vw)]"
+                >
                   <div className="mt-8 flex h-full flex-col">
-                    <p className="text-muted-foreground font-mono text-xs uppercase tracking-[0.2em]">
+                    {/* The dialog's accessible name, so screen readers announce "Navigation". */}
+                    <SheetTitle className="font-mono text-xs font-normal uppercase tracking-[0.2em] text-muted-foreground">
                       Navigation
-                    </p>
+                    </SheetTitle>
 
                     <nav className="mt-6" aria-label="Section navigation">
                       <ul className="flex flex-col">
@@ -154,9 +163,9 @@ export function PortfolioNav({ name, role }: PortfolioNavProps) {
                               <a
                                 href={`#${item.id}`}
                                 onClick={() => setMobileOpen(false)}
-                                className="border-border/60 hover:text-primary flex items-baseline gap-3 border-b py-4 text-lg font-medium transition-colors"
+                                className="flex items-baseline gap-3 border-b border-border/60 py-4 text-lg font-medium transition-colors hover:text-primary"
                               >
-                                <span className="text-muted-foreground font-mono text-xs">
+                                <span className="font-mono text-xs text-muted-foreground">
                                   {String(index + 1).padStart(2, "0")}
                                 </span>
                                 {item.label}

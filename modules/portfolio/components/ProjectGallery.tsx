@@ -17,7 +17,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="border-border/70 group/preview relative aspect-[16/10] overflow-hidden rounded-2xl border bg-black shadow-xl">
+      <div className="group/preview relative aspect-[16/10] overflow-hidden rounded-2xl border border-border/70 bg-black shadow-xl">
         {images.map((image, index) => (
           <Image
             key={image.src}
@@ -53,9 +53,9 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
               aria-pressed={index === active}
               aria-label={`Show ${image.caption}`}
               className={cn(
-                "bg-card focus-visible:ring-ring w-full overflow-hidden rounded-xl border text-left transition focus-visible:outline-none focus-visible:ring-2",
+                "w-full overflow-hidden rounded-xl border bg-card text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 index === active
-                  ? "border-primary/70 ring-primary/30 ring-1"
+                  ? "border-primary/70 ring-1 ring-primary/30"
                   : "border-border/70 opacity-60 hover:opacity-100",
               )}
             >

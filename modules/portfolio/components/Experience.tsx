@@ -21,7 +21,7 @@ export function Experience({ experiences, education }: ExperienceProps) {
         <ol className="relative">
           {/* Timeline rail */}
           <span
-            className="via-border from-primary absolute left-[7px] top-2 hidden h-[calc(100%-2rem)] w-px bg-gradient-to-b to-transparent sm:block"
+            className="absolute left-[7px] top-2 hidden h-[calc(100%-2rem)] w-px bg-gradient-to-b from-primary via-border to-transparent sm:block"
             aria-hidden
           />
 
@@ -31,12 +31,12 @@ export function Experience({ experiences, education }: ExperienceProps) {
                 <article className="relative pb-10 sm:pl-10 lg:grid lg:grid-cols-[11.5rem_1fr] lg:gap-10 lg:pl-10">
                   {/* Node */}
                   <span
-                    className="border-background bg-primary absolute left-0 top-2 hidden h-[15px] w-[15px] rounded-full border-4 sm:block"
+                    className="absolute left-0 top-2 hidden h-[15px] w-[15px] rounded-full border-4 border-background bg-primary sm:block"
                     aria-hidden
                   />
 
                   <div className="lg:pt-0.5">
-                    <p className="text-muted-foreground whitespace-nowrap font-mono text-xs uppercase tracking-[0.15em]">
+                    <p className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.15em] text-muted-foreground">
                       {experience.startDate} — {experience.endDate ?? "Present"}
                     </p>
                     {experience.isCurrent ? (
@@ -47,18 +47,18 @@ export function Experience({ experiences, education }: ExperienceProps) {
                     ) : null}
                   </div>
 
-                  <div className="border-border bg-card hover:border-primary/40 mt-4 rounded-2xl border p-6 transition-colors lg:mt-0 lg:p-7">
+                  <div className="mt-4 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40 lg:mt-0 lg:p-7">
                     <header className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                       <h3 className="text-lg font-semibold tracking-tight sm:text-xl">
                         {experience.role}
                       </h3>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-sm text-muted-foreground">
                         {experience.location}
                       </p>
                     </header>
 
                     <p className="mt-1 text-sm">
-                      <span className="text-primary font-semibold">
+                      <span className="font-semibold text-primary">
                         {experience.company}
                       </span>
                       <span className="text-muted-foreground">
@@ -67,7 +67,7 @@ export function Experience({ experiences, education }: ExperienceProps) {
                       </span>
                     </p>
 
-                    <p className="text-muted-foreground mt-4 text-sm leading-relaxed sm:text-base">
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
                       {experience.summary}
                     </p>
 
@@ -75,10 +75,10 @@ export function Experience({ experiences, education }: ExperienceProps) {
                       {experience.highlights.map((highlight) => (
                         <li
                           key={highlight}
-                          className="text-muted-foreground flex gap-3 text-sm leading-relaxed"
+                          className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
                         >
                           <span
-                            className="bg-primary/60 mt-[0.55rem] h-1 w-1 shrink-0 rounded-full"
+                            className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-primary/60"
                             aria-hidden
                           />
                           {highlight}
@@ -90,7 +90,7 @@ export function Experience({ experiences, education }: ExperienceProps) {
                       {experience.stack.map((technology) => (
                         <li
                           key={technology}
-                          className="border-border bg-muted/60 text-muted-foreground rounded-full border px-2.5 py-1 font-mono text-[0.7rem]"
+                          className="rounded-full border border-border bg-muted/60 px-2.5 py-1 font-mono text-[0.7rem] text-muted-foreground"
                         >
                           {technology}
                         </li>
@@ -106,25 +106,25 @@ export function Experience({ experiences, education }: ExperienceProps) {
 
       {/* Education */}
       <Reveal>
-        <div className="border-border bg-card mt-6 rounded-2xl border p-6 lg:p-7">
+        <div className="mt-6 rounded-2xl border border-border bg-card p-6 lg:p-7">
           <h3 className="flex items-center gap-2.5 text-base font-semibold">
-            <GraduationCap className="text-primary h-[1.15rem] w-[1.15rem]" />
+            <GraduationCap className="h-[1.15rem] w-[1.15rem] text-primary" />
             Education
           </h3>
 
-          <ul className="divide-border/70 mt-5 divide-y">
+          <ul className="mt-5 divide-y divide-border/70">
             {education.map((entry) => (
               <li key={entry.id} className="py-4 first:pt-0 last:pb-0">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <p className="font-medium">{entry.degree}</p>
-                  <p className="text-muted-foreground font-mono text-xs">
+                  <p className="font-mono text-xs text-muted-foreground">
                     {entry.period}
                   </p>
                 </div>
-                <p className="text-primary mt-0.5 text-sm">
+                <p className="mt-0.5 text-sm text-primary">
                   {entry.institution}
                 </p>
-                <p className="text-muted-foreground mt-1 text-sm">
+                <p className="mt-1 text-sm text-muted-foreground">
                   {entry.detail}
                 </p>
               </li>

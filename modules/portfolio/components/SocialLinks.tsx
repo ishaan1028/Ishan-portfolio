@@ -40,7 +40,7 @@ export function SocialLinks({
               aria-label={link.label}
               title={link.label}
               className={cn(
-                "border-border bg-card/60 text-muted-foreground hover:border-primary/40 hover:text-foreground flex items-center justify-center rounded-full border transition-all duration-200 hover:-translate-y-0.5",
+                "flex items-center justify-center rounded-full border border-border bg-card/60 text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:text-foreground",
                 size === "sm" ? "h-9 w-9" : "h-10 w-10",
               )}
             >

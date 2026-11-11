@@ -6,12 +6,7 @@
  */
 
 export type SocialPlatform =
-  | "github"
-  | "linkedin"
-  | "x"
-  | "dribbble"
-  | "email"
-  | "website";
+  "github" | "linkedin" | "x" | "dribbble" | "email" | "website";
 
 export interface SocialLink {
   id: string;
@@ -27,6 +22,8 @@ export interface Profile {
   role: string;
   /** Short punchy headline, rendered as the hero H1 tail. */
   headline: string;
+  /** Search-result snippet; keep it under ~155 characters. */
+  metaDescription: string;
   /** 1–2 sentence hero paragraph. */
   summary: string;
   location: string;

@@ -33,7 +33,6 @@
     /* Portfolio-only decorative tokens */
     --portfolio-glow-a: 91 91 214;
     --portfolio-glow-b: 14 165 233;
-    --portfolio-surface: 255 255 255;
     --portfolio-grid: rgba(11, 13, 18, 0.05);
   }
 
@@ -58,7 +57,6 @@
 
     --portfolio-glow-a: 139 139 245;
     --portfolio-glow-b: 56 189 248;
-    --portfolio-surface: 14 16 21;
     --portfolio-grid: rgba(237, 239, 244, 0.06);
   }
 
@@ -74,15 +72,6 @@
 }
 
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
   .text-balance {
     text-wrap: balance;
   }
@@ -93,11 +82,8 @@
 
   /* Subtle blueprint grid used behind hero / CTA panels */
   .bg-grid {
-    background-image: linear-gradient(
-        to right,
-        var(--portfolio-grid) 1px,
-        transparent 1px
-      ),
+    background-image:
+      linear-gradient(to right, var(--portfolio-grid) 1px, transparent 1px),
       linear-gradient(to bottom, var(--portfolio-grid) 1px, transparent 1px);
     background-size: 64px 64px;
   }
@@ -110,6 +96,14 @@
     background-size: 20px 20px;
   }
 
+  /*
+   * Soft color glow; set the color with a text utility (e.g. `text-primary/20`).
+   * A radial gradient instead of filter: blur(), which took ~4s of main-thread
+   * paint on Lighthouse's emulated phone.
+   */
+  .glow {
+    background-image: radial-gradient(closest-side, currentColor, transparent);
+  }
 
   .mask-fade-bottom {
     mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
@@ -152,7 +146,6 @@
     transition: none;
   }
 
-  .animate-float,
   .animate-pulse-ring,
   .animate-fade-in {
     animation: none !important;

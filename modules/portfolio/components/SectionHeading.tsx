@@ -7,7 +7,6 @@ interface SectionHeadingProps {
   eyebrow: string;
   title: string;
   description?: string;
-  align?: "left" | "center";
   className?: string;
 }
 
@@ -15,19 +14,12 @@ export function SectionHeading({
   eyebrow,
   title,
   description,
-  align = "left",
   className,
 }: SectionHeadingProps) {
   return (
-    <Reveal
-      className={cn(
-        "flex flex-col gap-4",
-        align === "center" && "items-center text-center",
-        className,
-      )}
-    >
-      <span className="text-muted-foreground inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em]">
-        <span className="bg-primary h-px w-6" aria-hidden />
+    <Reveal className={cn("flex flex-col gap-4", className)}>
+      <span className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        <span className="h-px w-6 bg-primary" aria-hidden />
         {eyebrow}
       </span>
 
@@ -36,12 +28,7 @@ export function SectionHeading({
       </h2>
 
       {description ? (
-        <p
-          className={cn(
-            "text-muted-foreground max-w-2xl text-pretty text-base leading-relaxed sm:text-lg",
-            align === "center" && "mx-auto",
-          )}
-        >
+        <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
           {description}
         </p>
       ) : null}
@@ -59,7 +46,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "border-border/60 scroll-mt-28 border-t py-20 sm:py-24 lg:py-32",
+        "scroll-mt-28 border-t border-border/60 py-20 sm:py-24 lg:py-32",
         className,
       )}
     >

@@ -29,9 +29,9 @@ export function Skills({ skillGroups }: SkillsProps) {
 
           return (
             <Reveal key={group.id} delay={index * 90}>
-              <div className="border-border bg-card hover:border-primary/40 flex h-full flex-col rounded-2xl border p-6 transition-colors">
+              <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
                 <div className="flex items-center gap-3">
-                  <span className="bg-primary/10 text-primary flex h-9 w-9 items-center justify-center rounded-lg">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <GroupIcon className="h-[1.1rem] w-[1.1rem]" />
                   </span>
                   <h3 className="text-lg font-semibold tracking-tight">
@@ -39,7 +39,7 @@ export function Skills({ skillGroups }: SkillsProps) {
                   </h3>
                 </div>
 
-                <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {group.description}
                 </p>
 
@@ -47,7 +47,7 @@ export function Skills({ skillGroups }: SkillsProps) {
                   {group.skills.map((skill) => (
                     <li
                       key={skill}
-                      className="border-border bg-muted/60 text-foreground/80 rounded-full border px-3 py-1 text-[0.8rem] font-medium"
+                      className="rounded-full border border-border bg-muted/60 px-3 py-1 text-[0.8rem] font-medium text-foreground/80"
                     >
                       {skill}
                     </li>

@@ -12,14 +12,14 @@ const footerLinks = [
 
 export function PortfolioFooter({ profile }: { profile: Profile }) {
   return (
-    <footer className="border-border/60 border-t py-12">
+    <footer className="border-t border-border/60 py-12">
       <div className="container">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
             <p className="text-lg font-semibold tracking-tight">
               {profile.name}
             </p>
-            <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {profile.role} based in {profile.location}. Currently{" "}
               {profile.availability.isAvailable
                 ? "open to new work"
@@ -35,7 +35,7 @@ export function PortfolioFooter({ profile }: { profile: Profile }) {
                 <li key={link.id}>
                   <a
                     href={`#${link.id}`}
-                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </a>
@@ -45,15 +45,15 @@ export function PortfolioFooter({ profile }: { profile: Profile }) {
           </nav>
         </div>
 
-        <div className="border-border/60 mt-10 flex flex-col-reverse items-center justify-between gap-4 border-t pt-6 sm:flex-row">
-          <p className="text-muted-foreground text-center font-mono text-xs sm:text-left">
+        <div className="mt-10 flex flex-col-reverse items-center justify-between gap-4 border-t border-border/60 pt-6 sm:flex-row">
+          <p className="text-center font-mono text-xs text-muted-foreground sm:text-left">
             © {new Date().getFullYear()} {profile.name}. Built with Next.js &
             Tailwind CSS.
           </p>
 
           <a
             href="#top"
-            className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1.5 text-xs font-medium transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Back to top
             <ArrowUp className="h-3.5 w-3.5" />

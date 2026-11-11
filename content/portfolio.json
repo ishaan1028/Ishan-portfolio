@@ -4,6 +4,7 @@
     "name": "Ishan Dhawane",
     "role": "Senior Frontend Engineer",
     "headline": "AI-native products that feel instant",
+    "metaDescription": "Ishan Dhawane is a senior frontend engineer in Pune with 5+ years building fast, AI-powered SaaS products with React, Next.js and TypeScript.",
     "summary": "Senior frontend engineer with 5+ years building scalable SaaS platforms and AI-powered product experiences, from agent workflows and real-time streaming to high-performance analytics.",
     "location": "Pune, Maharashtra",
     "timezone": "IST (UTC+5:30)",
@@ -49,41 +50,25 @@
         "icon": "sparkles",
         "title": "AI & agentic interfaces",
         "description": "Agent, skill and workflow builders, streaming LLM chat, and agentic generative UI on the AG-UI protocol.",
-        "tags": [
-          "AG-UI",
-          "Generative UI",
-          "LLM streaming"
-        ]
+        "tags": ["AG-UI", "Generative UI", "LLM streaming"]
       },
       {
         "icon": "radio",
         "title": "Real-time systems",
         "description": "WebSocket layers with short-lived auth tickets, automatic reconnection and stalled-stream recovery.",
-        "tags": [
-          "WebSockets",
-          "Voice input",
-          "Live updates"
-        ]
+        "tags": ["WebSockets", "Voice input", "Live updates"]
       },
       {
         "icon": "layers",
         "title": "Frontend architecture",
         "description": "Reusable UI infrastructure and shared controllers, so one foundation powers many product surfaces.",
-        "tags": [
-          "React",
-          "Next.js",
-          "TanStack Query"
-        ]
+        "tags": ["React", "Next.js", "TanStack Query"]
       },
       {
         "icon": "gauge",
         "title": "Performance & analytics",
         "description": "Code splitting, lazy loading and memoization, plus interactive drill-down dashboards with Nivo.",
-        "tags": [
-          "Core Web Vitals",
-          "Nivo",
-          "IndexedDB"
-        ]
+        "tags": ["Core Web Vitals", "Nivo", "IndexedDB"]
       }
     ]
   },
@@ -329,7 +314,6 @@
         "Realtime",
         "TanStack Query",
         "Zod",
-        "Tailwind CSS",
         "shadcn/ui",
         "Playwright",
         "Vercel"

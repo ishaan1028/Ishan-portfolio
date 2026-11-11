@@ -36,7 +36,7 @@ export function ScrollToTop() {
         event.currentTarget.blur();
       }}
       className={cn(
-        "bg-card/80 text-foreground hover:text-primary fixed bottom-6 right-6 z-40 h-11 w-11 shadow-lg backdrop-blur transition-all duration-300 sm:bottom-8 sm:right-8",
+        "fixed bottom-6 right-6 z-40 h-11 w-11 bg-card/80 text-foreground shadow-lg backdrop-blur transition-all duration-300 hover:text-primary sm:bottom-8 sm:right-8",
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0",

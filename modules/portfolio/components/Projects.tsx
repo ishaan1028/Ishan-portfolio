@@ -61,8 +61,8 @@ function ProjectShowcase({ project }: { project: Project }) {
     <article className="relative isolate overflow-hidden rounded-3xl border border-border bg-card shadow-sm">
       {/* Warm glow that echoes the project's own artwork */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute -left-40 -top-40 h-[28rem] w-[28rem] rounded-full bg-orange-500/10 blur-[120px]" />
-        <div className="absolute -bottom-40 right-0 h-[24rem] w-[24rem] rounded-full bg-pink-500/10 blur-[120px]" />
+        <div className="glow absolute -left-56 -top-56 h-[35.5rem] w-[35.5rem] text-orange-500/10" />
+        <div className="glow absolute -bottom-56 -right-16 h-[31.5rem] w-[31.5rem] text-pink-500/10" />
       </div>
 
       <div className="grid gap-8 p-4 sm:p-6 lg:grid-cols-[minmax(0,1.45fr)_minmax(0,1fr)] lg:gap-10 lg:p-8">

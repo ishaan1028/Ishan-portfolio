@@ -38,8 +38,7 @@ export function ColorModeToggle() {
         >
           {colorModeOptions.map((option) => (
             <DropdownMenuRadioItem key={option.value} value={option.value}>
-              <option.icon className="mr-2 h-4 w-4 opacity-50" />{" "}
-              {option.label}
+              <option.icon className="mr-2 h-4 w-4 opacity-50" /> {option.label}
             </DropdownMenuRadioItem>
           ))}
         </DropdownMenuRadioGroup>
